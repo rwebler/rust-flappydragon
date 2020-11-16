@@ -31,7 +31,7 @@ impl Player {
             self.y,
             RGB::named(YELLOW),
             RGB::named(BLACK),
-            to_cp437('@')
+            to_cp437('@'),
         );
     }
     fn gravity_and_move(&mut self) {
@@ -73,7 +73,7 @@ impl Obstacle {
                 y,
                 RGB::named(RED),
                 RGB::named(BLACK),
-                to_cp437('|')
+                to_cp437('|'),
             );
         }
         for y in self.gap_y + half_size..SCREEN_HEIGHT {
@@ -82,7 +82,7 @@ impl Obstacle {
                 y,
                 RGB::named(RED),
                 RGB::named(BLACK),
-                to_cp437('|')
+                to_cp437('|'),
             );
         }
     }
@@ -136,7 +136,7 @@ impl State {
         }
     }
     fn restart(&mut self) {
-        self.player = Player::new(5,25);
+        self.player = Player::new(5, 25);
         self.frame_time = 0.0;
         self.mode = GameMode::Playing;
     }
